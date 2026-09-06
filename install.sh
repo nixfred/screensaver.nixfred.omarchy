@@ -69,35 +69,36 @@ else
 fi
 
 # --- 4. any other launch path -------------------------------------------
-# The idle service is not the only way a screensaver starts. Point every
-# configured launcher at the orrery too, so it is genuinely the default and
-# not just what happens when you walk away.
+# The idle service is not the only way a screensaver starts. But shell.json
+# holds the entire bar and is written by the running shell and by any other
+# session at any moment, so this REPORTS what still points at the stock
+# screensaver rather than rewriting the file underneath them. There is no
+# IPC for a service plugin's settings -- setBarWidget only knows bar widgets.
 python3 - "$ROOT" <<'PY'
-import json, os, sys, shutil, time
+import json, os, sys
 root = sys.argv[1]
 launch = os.path.join(root, "bin", "orrery-launch")
-path = os.path.expanduser("~/.config/omarchy/shell.json")
 try:
-    with open(path) as fh:
+    with open(os.path.expanduser("~/.config/omarchy/shell.json")) as fh:
         doc = json.load(fh)
-except Exception as e:
-    print("  could not read shell.json (%s); skipping" % e); raise SystemExit(0)
+except Exception:
+    raise SystemExit(0)
 
-changed = []
+stale = []
 for p in doc.get("plugins", []):
-    for k, v in list(p.items()):
-        if k.endswith("Command") and isinstance(v, str) and                 ("omarchy-launch-screensaver" in v or "omarchy launch screensaver" in v):
-            p[k] = launch + (" force" if "force" in v else "")
-            changed.append("%s.%s" % (p.get("id", "?"), k))
+    for k, v in p.items():
+        if k.endswith("Command") and isinstance(v, str) and \
+                ("omarchy-launch-screensaver" in v or "omarchy launch screensaver" in v):
+            stale.append((p.get("id", "?"), k, v))
 
-if changed:
-    shutil.copy(path, path + ".bak-" + time.strftime("%Y-%m-%d-%H%M%S"))
-    with open(path, "w") as fh:
-        json.dump(doc, fh, indent=2)
-        fh.write("\n")
-    print("  repointed: " + ", ".join(changed))
+if stale:
+    print("  these still launch the stock screensaver:")
+    for pid, k, v in stale:
+        print("    %s.%s = %s" % (pid, k, v))
+    print("  point them at: %s force" % launch)
+    print("  (edit via the Omarchy settings UI, not by rewriting shell.json)")
 else:
-    print("  no other launchers to repoint")
+    print("  no other launchers point at the stock screensaver")
 PY
 
 # The stock screensaver needs no toggling: the patched idle service calls
