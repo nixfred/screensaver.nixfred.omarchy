@@ -179,6 +179,9 @@ def main(argv=None):
     ap.add_argument("--aspect", type=float, default=None,
                     help="dot aspect override; default probes the terminal")
     ap.add_argument("--no-hud", action="store_true")
+    ap.add_argument("--no-refocus", action="store_true",
+                    help="do not claw back keyboard focus, and do not exit when "
+                         "it is lost; for running windowed alongside other work")
     ap.add_argument("--frames", type=int, default=0,
                     help="render N frames then exit (headless self-test)")
     args = ap.parse_args(argv)
@@ -274,7 +277,7 @@ def _run(canvas, fleet, larry, args, stop, sink, max_frames, hud, reader):
 
             # Focus is not an exit, but without it Escape cannot arrive.
             # Ask for it back; give up only if it stays gone a long time.
-            if not reader.focused and reader.unfocused_since:
+            if not args.no_refocus and not reader.focused and reader.unfocused_since:
                 gone = time.time() - reader.unfocused_since
                 if gone > UNFOCUSED_GIVE_UP:
                     _log_exit("unfocused", "%.0fs without focus" % gone)

@@ -1,13 +1,35 @@
-# ORRERY
+<h1 align="center">ORRERY</h1>
 
-The nixfred fleet as an orbital model, for the idle screen on `dex`.
+<p align="center">
+  <em>The nixfred fleet as an orbital model, for the idle screen on <code>dex</code>.</em>
+</p>
 
-An orrery is a mechanical model of a solar system — a thing you can watch
-turn. This one is built from `https://nixfred.com/sites.json`, the master
-registry behind nixfred.com, so every site in the fleet is a body in it. Add
-a site to the registry and a star appears here. There is no second list.
+<p align="center">
+  <img src="media/orrery.gif" alt="The ORRERY cold start: black, one dot, dust, then eight orbital shells drawing themselves outermost inward until the whole fleet is present" width="100%">
+</p>
+
+<p align="center">
+  <sub><b>COLD START</b> — black, one dot, dust, then the shells draw themselves<br>
+  outermost inward until all 53 sites are turning.</sub>
+</p>
+
+---
+
+An orrery is a mechanical model of a solar system — a thing you can watch turn.
+This one is built from `https://nixfred.com/sites.json`, the master registry
+behind nixfred.com, so every site in the fleet is a body in it. Add a site to
+the registry and a star appears here. There is no second list.
 
 Larry narrates. He is pre-written and cached, never generated live.
+
+<p align="center">
+  <img src="media/tour.gif" alt="THE TOUR: the camera settles on one site at a time, its title, host and description typing out alongside Larry's commentary" width="100%">
+</p>
+
+<p align="center">
+  <sub><b>THE TOUR</b> — it settles on each of the 52 in turn: title, host,
+  description, and what Larry makes of it.</sub>
+</p>
 
 ## It does not loop, it descends
 
@@ -28,16 +50,42 @@ static on a real screen. Card fades are a fraction of each card's own dwell
 time rather than a fixed number of seconds, so a site stays fully readable
 for about 4.6 s at x1 no matter how the speed is set.
 
+
 ### The aircraft
 
 `dad.nixfred.com` is not a body and does not orbit anything. It crosses the
-whole field corner to corner every seven minutes or so, on a timer that
-never synchronises to the movements, in every movement including the last.
-While it crosses, the field yields and the card reads only the name and
-*Fifty years in the air.*
+whole field corner to corner every seven minutes or so, on a timer that never
+synchronises to the movements, in every movement including the last. While it
+crosses, the field yields and the card reads only the name and *Fifty years in
+the air.*
+
+<p align="center">
+  <img src="media/aircraft.png" alt="The field dimmed to almost nothing, a single bright light crossing it, and the words Freddie Wright Nix Sr., Fifty years in the air" width="100%">
+</p>
 
 Larry has no line for it. That is enforced in `orrery/larry.py`, not left to
 the data — `for_site("dad")` returns nothing, always.
+
+## The other movements
+
+<table>
+<tr>
+<td width="50%"><img src="media/dive.png" alt="A single orbital shell zoomed to fill the frame, its section name in large letters above it"></td>
+<td width="50%"><img src="media/galaxy.png" alt="The orbits dissolved into a wired node cloud, slowly rotating, titled ONE CONNECTED SYSTEM"></td>
+</tr>
+<tr>
+<td><b>SECTION DIVES</b> — drops into each of the eight shells and lets it fill the frame, labelling what it holds.</td>
+<td><b>THE GALAXY</b> — the orbits dissolve into the wiring and the whole thing turns.</td>
+</tr>
+<tr>
+<td><img src="media/deepfield.png" alt="The fleet reduced to one small cluster in a wide empty starfield"></td>
+<td><img src="media/tour.png" alt="A single site card: THE UNIVERSE AS I SEE IT, god.nixfred.com, with its description and Larry's two lines"></td>
+</tr>
+<tr>
+<td><b>DEEP FIELD</b> — pulls back until the whole fleet is one cluster. Then <b>THE LONG NIGHT</b>, which never ends.</td>
+<td><b>A card</b> — title, host, description, and Larry, over a scrim so the field does not print through the text.</td>
+</tr>
+</table>
 
 ## Install
 
@@ -149,6 +197,8 @@ orrery/acts.py        the six movements
 orrery/input.py       escape-sequence tokeniser: Esc quits, arrows set speed
 orrery/larry.py       commentary selection, and the dad silence rule
 orrery/hud.py         status line, local sources only
+tools/render_frames.py  renders frames to PPM with no screen and no font,
+                      by painting the dot buffer straight to pixels
 data/fleet.json       bundled registry snapshot (fallback)
 data/larry.json       seed commentary
 config/foot-orrery.ini
