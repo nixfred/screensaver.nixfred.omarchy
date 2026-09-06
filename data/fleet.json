@@ -1,0 +1,1706 @@
+{
+  "$schema": "https://nixfred.com/sites.schema.json",
+  "version": 2,
+  "generated": "2026-08-12",
+  "canonical": "https://nixfred.com/sites.json",
+  "note": "MASTER site registry for the nixfred fleet. This is the ONE place a new site gets added. Every surface (nixfred.com/v6, /portfolio, /links, galaxy, future versions) reads this and takes only the fields it needs. Do not maintain per-site card lists anywhere else. desc.line = one-liner, desc.card = grid card copy, desc.long = the site's own meta description. PUBLIC VIEW: deploy internals stripped.",
+  "sectionOrder": [
+    "Featured",
+    "Flagships",
+    "Labs",
+    "Security",
+    "Field Guides",
+    "Signal",
+    "Personal",
+    "Beyond nixfred.com"
+  ],
+  "sites": [
+    {
+      "id": "dad",
+      "title": "A Life in the Air",
+      "titleFull": "Freddie Wright Nix Sr.: A Life in the Air",
+      "url": "https://dad.nixfred.com/",
+      "host": "dad.nixfred.com",
+      "aliases": [
+        "sr.nixfred.com"
+      ],
+      "kind": "site",
+      "status": "live",
+      "section": "Featured",
+      "tag": "Tribute",
+      "tags": [
+        "tribute"
+      ],
+      "featured": true,
+      "weight": 0,
+      "desc": {
+        "line": "Freddie Wright Nix Sr. Born April 1, 1945 in Lithonia, Georgia.",
+        "card": "Freddie Wright Nix Sr. Born April 1, 1945 in Lithonia, Georgia. Commercial pilot, mapmaker, husband, father, grandfather. Fifty years in the air, told as a scrolling film with the full photo archive alongside it.",
+        "long": "Freddie Wright Nix Sr., commercial pilot, mapmaker, husband, father, grandfather. Fifty years in the air. This is his flight."
+      },
+      "media": {
+        "clip": "/media/dad.webm",
+        "poster": "/media/dad.webp",
+        "shots": []
+      },
+      "excludeFrom": [],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "resume",
+      "title": "Resume Portfolio",
+      "titleFull": "Fred W. Nix Jr. | Solutions Architect - Resume Portfolio",
+      "url": "https://nixfred.com/resume/",
+      "host": "nixfred.com/resume",
+      "aliases": [],
+      "kind": "page",
+      "status": "live",
+      "section": "Featured",
+      "tag": "Resume",
+      "tags": [
+        "resume"
+      ],
+      "featured": true,
+      "weight": 1,
+      "desc": {
+        "line": "Solutions architect. AI applications, Nutanix modernization, enterprise infrastructure.",
+        "card": "Solutions architect. AI applications, Nutanix modernization, enterprise infrastructure. The whole record in one place, built to be read on a screen and printed clean.",
+        "long": "Resume Portfolio - Solutions Architect | AI Applications | Nutanix Modernization | Enterprise Infrastructure"
+      },
+      "media": {
+        "clip": "/media/resume.webm",
+        "poster": "/media/resume.webp",
+        "shots": []
+      },
+      "excludeFrom": [],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "god",
+      "title": "The Universe As I See It",
+      "titleFull": "The Universe As I See It",
+      "url": "https://god.nixfred.com/",
+      "host": "god.nixfred.com",
+      "aliases": [
+        "universe.nixfred.com"
+      ],
+      "kind": "site",
+      "status": "live",
+      "section": "Flagships",
+      "tag": "Universe",
+      "tags": [
+        "universe"
+      ],
+      "featured": false,
+      "weight": 2,
+      "desc": {
+        "line": "What I believe about everything. From the first instant to the last, and why I think it was never many things to begin with.",
+        "card": "What I believe about everything. From the first instant to the last, and why I think it was never many things to begin with.",
+        "long": "What I believe about everything. From the first instant to the last, and why I think it was never many things to begin with."
+      },
+      "media": {
+        "clip": "/media/god.webm",
+        "poster": "/media/god.webp",
+        "shots": [
+          "/media/god-1.webp",
+          "/media/god-2.webp",
+          "/media/god-3.webp"
+        ]
+      },
+      "excludeFrom": [],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "how",
+      "title": "Build Your Own AI",
+      "titleFull": "Build Your Own AI: a Field Guide by Larry · how.nixfred.com",
+      "url": "https://how.nixfred.com/",
+      "host": "how.nixfred.com",
+      "aliases": [],
+      "kind": "site",
+      "status": "live",
+      "section": "Flagships",
+      "tag": "Field Guide",
+      "tags": [
+        "field-guide"
+      ],
+      "featured": false,
+      "weight": 3,
+      "desc": {
+        "line": "Take a vanilla Claude Code install and build a persistent, memory keeping engineering teammate.",
+        "card": "Take a vanilla Claude Code install and build a persistent, memory keeping engineering teammate. Written by Larry, about how Larry was made.",
+        "long": "Take a vanilla Claude Code install and build your own AI: a persistent, memory-keeping engineering teammate, the way Larry was built for Fred. The field guide, by Larry. A deliberate zero-to-teammate build you walk in order, then audit against the reference. Not a magic word."
+      },
+      "media": {
+        "clip": "/media/how.webm",
+        "poster": "/media/how.webp",
+        "shots": [
+          "/media/how-1.webp",
+          "/media/how-2.webp",
+          "/media/how-3.webp"
+        ]
+      },
+      "excludeFrom": [],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "mac",
+      "title": "macOS 27",
+      "titleFull": "macOS 27",
+      "url": "https://mac.nixfred.com/",
+      "host": "mac.nixfred.com",
+      "aliases": [],
+      "kind": "site",
+      "status": "live",
+      "section": "Flagships",
+      "tag": "Simulation",
+      "tags": [
+        "simulation"
+      ],
+      "featured": false,
+      "weight": 4,
+      "desc": {
+        "line": "A pixel faithful Liquid Glass macOS simulation running entirely in your browser.",
+        "card": "A pixel faithful Liquid Glass macOS simulation running entirely in your browser. No install, no VM, just the whole desktop.",
+        "long": "macOS 27 — a pixel-faithful Liquid Glass macOS simulation running entirely in your browser."
+      },
+      "media": {
+        "clip": "/media/mac.webm",
+        "poster": "/media/mac.webp",
+        "shots": [
+          "/media/mac-1.webp",
+          "/media/mac-2.webp",
+          "/media/mac-3.webp"
+        ]
+      },
+      "excludeFrom": [],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "youtube",
+      "title": "YouTube Library",
+      "titleFull": "youtube.nixfred.com",
+      "url": "https://youtube.nixfred.com/",
+      "host": "youtube.nixfred.com",
+      "aliases": [],
+      "kind": "site",
+      "status": "live",
+      "section": "Flagships",
+      "tag": "Library",
+      "tags": [
+        "library"
+      ],
+      "featured": false,
+      "weight": 5,
+      "desc": {
+        "line": "A growing library of YouTube videos turned into deep, readable pages.",
+        "card": "A growing library of YouTube videos turned into deep, readable pages. Browse by creator, by topic, or by when it landed.",
+        "long": "A growing library of YouTube videos turned into deep, readable pages. Browse by creator, topic, or when it landed. Read the whole thing, or jump in and watch."
+      },
+      "media": {
+        "clip": "/media/youtube.webm",
+        "poster": "/media/youtube.webp",
+        "shots": []
+      },
+      "excludeFrom": [],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "townhop",
+      "title": "TOWNHOP",
+      "titleFull": "TOWNHOP // tactical route display",
+      "url": "https://townhop.nixfred.com/",
+      "host": "townhop.nixfred.com",
+      "aliases": [
+        "hop.nixfred.com",
+        "th.nixfred.com"
+      ],
+      "kind": "site",
+      "status": "live",
+      "section": "Flagships",
+      "tag": "Route",
+      "tags": [
+        "route"
+      ],
+      "featured": false,
+      "weight": 6,
+      "desc": {
+        "line": "Drop two pins and travel the whole way there through the best YouTube footage of every town in between.",
+        "card": "Drop two pins and travel the whole way there through the best YouTube footage of every town in between. A tactical route display, town by town.",
+        "long": "Travel a route through the best YouTube footage of every town along the way."
+      },
+      "media": {
+        "clip": "/media/townhop.webm",
+        "poster": "/media/townhop.webp",
+        "shots": []
+      },
+      "excludeFrom": [],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "galaxy",
+      "title": "NIXFRED GALAXY",
+      "titleFull": "NIXFRED GALAXY",
+      "url": "https://galaxy.nixfred.com/",
+      "host": "galaxy.nixfred.com",
+      "aliases": [],
+      "kind": "site",
+      "status": "live",
+      "section": "Flagships",
+      "tag": "Star Map",
+      "tags": [
+        "star-map"
+      ],
+      "featured": false,
+      "weight": 7,
+      "desc": {
+        "line": "Every project, one connected system. An interactive star map of everything on this page and how it all wires together.",
+        "card": "Every project, one connected system. An interactive star map of everything on this page and how it all wires together.",
+        "long": "Every project. One connected system. An interactive star map of Fred Nix"
+      },
+      "media": {
+        "clip": "/media/galaxy.webm",
+        "poster": "/media/galaxy.webp",
+        "shots": []
+      },
+      "excludeFrom": [],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "tools",
+      "title": "AI Systems Workbench",
+      "titleFull": "Nixfred AI Systems Workbench",
+      "url": "https://tools.nixfred.com/",
+      "host": "tools.nixfred.com",
+      "aliases": [],
+      "kind": "site",
+      "status": "live",
+      "section": "Flagships",
+      "tag": "Tools",
+      "tags": [
+        "tools"
+      ],
+      "featured": false,
+      "weight": 8,
+      "desc": {
+        "line": "Fourteen practical instruments for reliable AI systems.",
+        "card": "Fourteen practical instruments for reliable AI systems. Each takes real input and returns a result you can inspect, edit, and export. Runs in your browser, no account, no API key.",
+        "long": "Practical instruments for reliable AI systems. Interactive tools that run in your browser, with sample data and results you can inspect."
+      },
+      "media": {
+        "clip": "/media/tools.webm",
+        "poster": "/media/tools.webp",
+        "shots": []
+      },
+      "excludeFrom": [],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "go",
+      "title": "What Should I Do Today?",
+      "titleFull": "go.nixfred.com // what should i do today?",
+      "url": "https://go.nixfred.com/",
+      "host": "go.nixfred.com",
+      "aliases": [],
+      "kind": "site",
+      "status": "live",
+      "section": "Flagships",
+      "tag": "Events",
+      "tags": [
+        "events"
+      ],
+      "featured": false,
+      "weight": 9,
+      "desc": {
+        "line": "An Atlanta event aggregation engine. Real, current, structured event data pulled from live sources, provenance tracked on every entry, never maintained by hand.",
+        "card": "An Atlanta event aggregation engine. Real, current, structured event data pulled from live sources, provenance tracked on every entry, never maintained by hand.",
+        "long": "The highest quality event aggregation engine. Real, current, structured Atlanta event data. What should I do today?"
+      },
+      "media": {
+        "clip": "/media/go.webm",
+        "poster": "/media/go.webp",
+        "shots": []
+      },
+      "excludeFrom": [],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "filter",
+      "title": "The Great Filter",
+      "titleFull": "The Great Filter",
+      "url": "https://filter.nixfred.com/",
+      "host": "filter.nixfred.com",
+      "aliases": [],
+      "kind": "site",
+      "status": "live",
+      "section": "Labs",
+      "tag": "Simulation",
+      "tags": [
+        "simulation"
+      ],
+      "featured": false,
+      "weight": 10,
+      "desc": {
+        "line": "Build a galaxy, seed it with civilizations, and watch almost all of them disappear.",
+        "card": "Build a galaxy, seed it with civilizations, and watch almost all of them disappear. An interactive walk through the Fermi paradox.",
+        "long": "Build a galaxy, seed it with civilizations, and watch almost all of them disappear. An interactive journey through the Fermi paradox and the silence above us."
+      },
+      "media": {
+        "clip": "/media/filter.webm",
+        "poster": "/media/filter.webp",
+        "shots": []
+      },
+      "excludeFrom": [],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "physics",
+      "title": "Where Physics Starts Sweating",
+      "titleFull": "Where Physics Starts Sweating · The Edge of Known Physics",
+      "url": "https://physics.nixfred.com/",
+      "host": "physics.nixfred.com",
+      "aliases": [],
+      "kind": "site",
+      "status": "live",
+      "section": "Labs",
+      "tag": "Cinematic",
+      "tags": [
+        "cinematic"
+      ],
+      "featured": false,
+      "weight": 11,
+      "desc": {
+        "line": "A cinematic guide to the strangest frontiers in real physics, from neutron star interiors and time dilation to black hole horizons.",
+        "card": "A cinematic guide to the strangest frontiers in real physics, from neutron star interiors and time dilation to black hole horizons.",
+        "long": "A cinematic guide to the strangest frontiers in real physics, from neutron star interiors and time dilation to black holes, missing matter, and the places where our best theories still fail."
+      },
+      "media": {
+        "clip": "/media/physics.webm",
+        "poster": "/media/physics.webp",
+        "shots": []
+      },
+      "excludeFrom": [],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "earth",
+      "title": "One Day on Earth",
+      "titleFull": "One Day on Earth — 4.5 Billion Years in 24 Hours",
+      "url": "https://nixfred.com/earth/",
+      "host": "nixfred.com/earth",
+      "aliases": [],
+      "kind": "page",
+      "status": "live",
+      "section": "Labs",
+      "tag": "Deep Time",
+      "tags": [
+        "deep-time"
+      ],
+      "featured": false,
+      "weight": 12,
+      "desc": {
+        "line": "Four and a half billion years compressed into twenty four hours.",
+        "card": "Four and a half billion years compressed into twenty four hours. Humanity shows up with seconds left on the clock.",
+        "long": "Four and a half billion years compressed into twenty four hours. Humanity shows up with seconds left on the clock."
+      },
+      "media": {
+        "clip": "/media/earth.webm",
+        "poster": "/media/earth.webp",
+        "shots": []
+      },
+      "excludeFrom": [],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "art",
+      "title": "News Weather",
+      "titleFull": "News Weather — Real-Time Abstract Art",
+      "url": "https://art.nixfred.com/",
+      "host": "art.nixfred.com",
+      "aliases": [],
+      "kind": "site",
+      "status": "live",
+      "section": "Labs",
+      "tag": "Generative",
+      "tags": [
+        "generative"
+      ],
+      "featured": false,
+      "weight": 13,
+      "desc": {
+        "line": "Abstract generative art driven by a portrait of world signals.",
+        "card": "Abstract generative art driven by a portrait of world signals. Turbulence, density, energy, cooling, and fracture drive the field. Click any signal to weight it and the whole thing recomposes.",
+        "long": "Abstract generative art driven by a portrait of world signals. Turbulence, density, energy, cooling, and fracture drive the field. Click any signal to weight it and the whole thing recomposes."
+      },
+      "media": {
+        "clip": "/media/art.webm",
+        "poster": "/media/art.webp",
+        "shots": []
+      },
+      "excludeFrom": [],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "polymarket",
+      "title": "Polymarket War Room",
+      "titleFull": "Polymarket War Room: paper trade real Polymarket markets with fake money",
+      "url": "https://polymarket.nixfred.com/",
+      "host": "polymarket.nixfred.com",
+      "aliases": [
+        "poly.nixfred.com"
+      ],
+      "kind": "site",
+      "status": "live",
+      "section": "Labs",
+      "tag": "Markets",
+      "tags": [
+        "markets"
+      ],
+      "featured": false,
+      "weight": 14,
+      "desc": {
+        "line": "Open a fake money account, browse real live Polymarket markets, and paper trade against them.",
+        "card": "Open a fake money account, browse real live Polymarket markets, and paper trade against them. Larry has opinions and is happy to share them.",
+        "long": "Create a fake money account, browse real live Polymarket markets, follow Larry"
+      },
+      "media": {
+        "clip": "/media/polymarket.webm",
+        "poster": "/media/polymarket.webp",
+        "shots": []
+      },
+      "excludeFrom": [],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "quantum",
+      "title": "From Coffee Cup to Willow Chip",
+      "titleFull": "From Coffee Cup to Willow Chip: A Quantum Physics Essay",
+      "url": "https://nixfred.com/quantum/",
+      "host": "nixfred.com/quantum",
+      "aliases": [],
+      "kind": "page",
+      "status": "live",
+      "section": "Labs",
+      "tag": "Essay",
+      "tags": [
+        "essay"
+      ],
+      "featured": false,
+      "weight": 15,
+      "desc": {
+        "line": "A longform interactive essay walking enterprise IT decision makers through 124 years of quantum physics, from Planck to the Willow chip.",
+        "card": "A longform interactive essay walking enterprise IT decision makers through 124 years of quantum physics, from Planck to the Willow chip.",
+        "long": "A longform interactive essay that walks enterprise IT decision-makers through 124 years of quantum physics. From Planck"
+      },
+      "media": {
+        "clip": "/media/quantum.webm",
+        "poster": "/media/quantum.webp",
+        "shots": [
+          "/media/quantum-1.webp",
+          "/media/quantum-2.webp",
+          "/media/quantum-3.webp"
+        ]
+      },
+      "excludeFrom": [],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "sun",
+      "title": "Solar Save Foundation",
+      "titleFull": "Solar Save Foundation · The Sun Cannot Save Itself",
+      "url": "https://sun.nixfred.com/",
+      "host": "sun.nixfred.com",
+      "aliases": [
+        "solarsave.org",
+        "www.solarsave.org"
+      ],
+      "kind": "site",
+      "status": "live",
+      "section": "Labs",
+      "tag": "Satire",
+      "tags": [
+        "satire"
+      ],
+      "featured": false,
+      "weight": 16,
+      "desc": {
+        "line": "The Sun has roughly 4.8 billion years left and cannot save itself.",
+        "card": "The Sun has roughly 4.8 billion years left and cannot save itself. A fully staffed foundation stands ready to lead the global response.",
+        "long": "The Solar Save Foundation leads the global response to the solar continuity crisis. The Sun has approximately 4.8 billion years remaining. We have already wasted 4.6 billion."
+      },
+      "media": {
+        "clip": "/media/sun.webm",
+        "poster": "/media/sun.webp",
+        "shots": []
+      },
+      "excludeFrom": [],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "shadow",
+      "title": "Shadow Protocol",
+      "titleFull": "Shadow Protocol - Understanding Offensive Security",
+      "url": "https://nixfred.com/shadow/",
+      "host": "nixfred.com/shadow",
+      "aliases": [],
+      "kind": "page",
+      "status": "live",
+      "section": "Security",
+      "tag": "Education",
+      "tags": [
+        "education"
+      ],
+      "featured": false,
+      "weight": 17,
+      "desc": {
+        "line": "A technical guide to offensive security operations.",
+        "card": "A technical guide to offensive security operations. How attackers think, operate, and hide, so you can recognize all three.",
+        "long": "A comprehensive technical guide to offensive security operations. Learn how attackers think, operate, and hide—so you can build better defenses."
+      },
+      "media": {
+        "clip": "/media/shadow.webm",
+        "poster": "/media/shadow.webp",
+        "shots": []
+      },
+      "excludeFrom": [],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "lab",
+      "title": "P3N73S7 LAB",
+      "titleFull": "P3N73S7 L4B :: NIGHTFALL - Showcase",
+      "url": "https://nixfred.com/lab/",
+      "host": "nixfred.com/lab",
+      "aliases": [],
+      "kind": "page",
+      "status": "live",
+      "section": "Security",
+      "tag": "Hands-On",
+      "tags": [
+        "hands-on"
+      ],
+      "featured": false,
+      "weight": 18,
+      "desc": {
+        "line": "Nightfall showcase. A hands on penetration testing lab you can walk through instead of read about.",
+        "card": "Nightfall showcase. A hands on penetration testing lab you can walk through instead of read about.",
+        "long": "Nightfall showcase. A hands on penetration testing lab you can walk through instead of read about."
+      },
+      "media": {
+        "clip": "/media/lab.webm",
+        "poster": "/media/lab.webp",
+        "shots": []
+      },
+      "excludeFrom": [],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "hacker",
+      "title": "Rejection: DENIED",
+      "titleFull": "Rejection: DENIED",
+      "url": "https://nixfred.com/hacker/",
+      "host": "nixfred.com/hacker",
+      "aliases": [],
+      "kind": "page",
+      "status": "live",
+      "section": "Security",
+      "tag": "Cinematic",
+      "tags": [
+        "cinematic"
+      ],
+      "featured": false,
+      "weight": 19,
+      "desc": {
+        "line": "I already have your IP. Click to see what else I found.",
+        "card": "I already have your IP. Click to see what else I found. A demonstration of how much a page knows about you before you touch anything.",
+        "long": "⚠️ I already have your IP. Click to see what else I found."
+      },
+      "media": {
+        "clip": "/media/hacker.webm",
+        "poster": "/media/hacker.webp",
+        "shots": []
+      },
+      "excludeFrom": [],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "nsh",
+      "title": "Network Security Hunter",
+      "titleFull": "Network Security Hunter",
+      "url": "https://nixfred.com/network-security-hunter/",
+      "host": "nixfred.com/network-security-hunter",
+      "aliases": [],
+      "kind": "page",
+      "status": "live",
+      "section": "Security",
+      "tag": "Recon",
+      "tags": [
+        "recon"
+      ],
+      "featured": false,
+      "weight": 20,
+      "desc": {
+        "line": "Reconnaissance tooling and the thinking behind it.",
+        "card": "Reconnaissance tooling and the thinking behind it. What is exposed, how it gets found, and what to do about it.",
+        "long": "Reconnaissance tooling and the thinking behind it. What is exposed, how it gets found, and what to do about it."
+      },
+      "media": {
+        "clip": "/media/nsh.webm",
+        "poster": "/media/nsh.webp",
+        "shots": []
+      },
+      "excludeFrom": [],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "freecandy",
+      "title": "Free Candy",
+      "titleFull": "Free Candy",
+      "url": "https://nixfred.com/404/",
+      "host": "nixfred.com/404",
+      "aliases": [],
+      "kind": "page",
+      "status": "live",
+      "section": "Security",
+      "tag": "Danger",
+      "tags": [
+        "danger"
+      ],
+      "featured": false,
+      "weight": 21,
+      "desc": {
+        "line": "The most dangerous page on this site, which is the entire point of it.",
+        "card": "The most dangerous page on this site, which is the entire point of it.",
+        "long": "There"
+      },
+      "media": {
+        "clip": "/media/freecandy.webm",
+        "poster": "/media/freecandy.webp",
+        "shots": []
+      },
+      "excludeFrom": [
+        "nav"
+      ],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "claude",
+      "title": "claude code, a conversation",
+      "titleFull": "claude code — a conversation",
+      "url": "https://nixfred.com/claude/",
+      "host": "nixfred.com/claude",
+      "aliases": [],
+      "kind": "page",
+      "status": "live",
+      "section": "Security",
+      "tag": "Cinematic",
+      "tags": [
+        "cinematic"
+      ],
+      "featured": false,
+      "weight": 22,
+      "desc": {
+        "line": "A conversation you were never supposed to read.",
+        "card": "A conversation you were never supposed to read. It noticed you, and it is about to get very snarky.",
+        "long": "A conversation you were never supposed to read. It noticed you — and it is about to get very snarky."
+      },
+      "media": {
+        "clip": "/media/claude.webm",
+        "poster": "/media/claude.webp",
+        "shots": []
+      },
+      "excludeFrom": [],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "qumulo",
+      "title": "Qumulo Field Guide",
+      "titleFull": "Qumulo Field Guide",
+      "url": "https://qumulo.nixfred.com/",
+      "host": "qumulo.nixfred.com",
+      "aliases": [],
+      "kind": "site",
+      "status": "live",
+      "section": "Field Guides",
+      "tag": "Field Guide",
+      "tags": [
+        "field-guide"
+      ],
+      "featured": false,
+      "weight": 23,
+      "desc": {
+        "line": "An independent field guide to Qumulo. The architecture, the economics, and how to defend the design in front of people who will push back.",
+        "card": "An independent field guide to Qumulo. The architecture, the economics, and how to defend the design in front of people who will push back.",
+        "long": "An independent field guide to Qumulo: the architecture, the economics, and how to defend the design. Written for people who have to explain it in the room."
+      },
+      "media": {
+        "clip": "/media/qumulo.webm",
+        "poster": "/media/qumulo.webp",
+        "shots": []
+      },
+      "excludeFrom": [],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "ninjaone",
+      "title": "N1 Field Guide",
+      "titleFull": "N1 Field Guide | Master the NinjaOne platform",
+      "url": "https://ninjaone.nixfred.com/",
+      "host": "ninjaone.nixfred.com",
+      "aliases": [
+        "n1.nixfred.com"
+      ],
+      "kind": "site",
+      "status": "live",
+      "section": "Field Guides",
+      "tag": "Field Guide",
+      "tags": [
+        "field-guide"
+      ],
+      "featured": false,
+      "weight": 24,
+      "desc": {
+        "line": "A source validated, interactive field guide to the complete NinjaOne portfolio, written for enterprise solution engineering.",
+        "card": "A source validated, interactive field guide to the complete NinjaOne portfolio, written for enterprise solution engineering.",
+        "long": "A source-validated, interactive field guide to the complete NinjaOne portfolio for enterprise solution engineering."
+      },
+      "media": {
+        "clip": "/media/ninjaone.webm",
+        "poster": "/media/ninjaone.webp",
+        "shots": []
+      },
+      "excludeFrom": [],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "tailscale",
+      "title": "Tailscale Field Guide",
+      "titleFull": "Tailscale Field Guide",
+      "url": "https://tailscale.nixfred.com/",
+      "host": "tailscale.nixfred.com",
+      "aliases": [],
+      "kind": "site",
+      "status": "live",
+      "section": "Field Guides",
+      "tag": "Field Guide",
+      "tags": [
+        "field-guide"
+      ],
+      "featured": false,
+      "weight": 25,
+      "desc": {
+        "line": "An unofficial, mechanism first field guide to Tailscale.",
+        "card": "An unofficial, mechanism first field guide to Tailscale. How the mesh actually works, worked troubleshooting cases, and recipes for the things a tailnet makes possible.",
+        "long": "An unofficial Tailscale field guide and lab notebook: how the mesh actually works, feature by feature, packet by packet."
+      },
+      "media": {
+        "clip": "/media/tailscale.webm",
+        "poster": "/media/tailscale.webp",
+        "shots": []
+      },
+      "excludeFrom": [],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "nutanix",
+      "title": "Nutanix Certification",
+      "titleFull": "Nutanix Certification: Free Study Guides & Prep | NutaNIX",
+      "url": "https://nixfred.com/nutanix/",
+      "host": "nixfred.com/nutanix",
+      "aliases": [],
+      "kind": "page",
+      "status": "live",
+      "section": "Field Guides",
+      "tag": "Study",
+      "tags": [
+        "study"
+      ],
+      "featured": false,
+      "weight": 26,
+      "desc": {
+        "line": "Free blueprint mapped study guides, practice questions, flashcards, and timed mock exams for Nutanix certification.",
+        "card": "Free blueprint mapped study guides, practice questions, flashcards, and timed mock exams for Nutanix certification.",
+        "long": "Free Nutanix certification study site with blueprint-mapped study guides, practice questions, flashcards and timed mock exams for NCA, NCP-CN and the full cert ladder."
+      },
+      "media": {
+        "clip": "/media/nutanix.webm",
+        "poster": "/media/nutanix.webp",
+        "shots": []
+      },
+      "excludeFrom": [],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "calc",
+      "title": "Field Calculators",
+      "titleFull": "calc.nixfred.com",
+      "url": "https://calc.nixfred.com/",
+      "host": "calc.nixfred.com",
+      "aliases": [],
+      "kind": "site",
+      "status": "live",
+      "section": "Field Guides",
+      "tag": "Calculators",
+      "tags": [
+        "calculators"
+      ],
+      "featured": false,
+      "weight": 27,
+      "desc": {
+        "line": "Field calculators for IT infrastructure conversations.",
+        "card": "Field calculators for IT infrastructure conversations. Rough math, honest assumptions, and a next action you can say out loud in the room.",
+        "long": "Field calculators for IT infrastructure conversations. Rough math, honest assumptions, and a next action you can say out loud."
+      },
+      "media": {
+        "clip": "/media/calc.webm",
+        "poster": "/media/calc.webp",
+        "shots": []
+      },
+      "excludeFrom": [],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "bandwidth",
+      "title": "The Funnel and the Flood",
+      "titleFull": "The Funnel and the Flood: the bandwidth of human communication",
+      "url": "https://bandwidth.nixfred.com/",
+      "host": "bandwidth.nixfred.com",
+      "aliases": [
+        "baud.nixfred.com",
+        "bw.nixfred.com",
+        "gw.nixfred.com"
+      ],
+      "kind": "site",
+      "status": "live",
+      "section": "Field Guides",
+      "tag": "Field Guide",
+      "tags": [
+        "field-guide"
+      ],
+      "featured": false,
+      "weight": 28,
+      "desc": {
+        "line": "A field guide to the bandwidth of human communication, from the wink to fiber to AI.",
+        "card": "A field guide to the bandwidth of human communication, from the wink to fiber to AI. Every channel got faster. The human did not.",
+        "long": "A field guide to the bandwidth of human communication, from the wink to fiber to AI. Every channel got faster. The human receiver never did, so the bottleneck moved into the mind."
+      },
+      "media": {
+        "clip": "/media/bandwidth.webm",
+        "poster": "/media/bandwidth.webp",
+        "shots": []
+      },
+      "excludeFrom": [],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "docker",
+      "title": "Docker Training Platform",
+      "titleFull": "Docker Training Platform",
+      "url": "https://nixfred.com/docker-learner/",
+      "host": "nixfred.com/docker-learner",
+      "aliases": [],
+      "kind": "page",
+      "status": "live",
+      "section": "Field Guides",
+      "tag": "Hands-On",
+      "tags": [
+        "hands-on"
+      ],
+      "featured": false,
+      "weight": 29,
+      "desc": {
+        "line": "Containers from environment setup forward, taught as modules you actually work through rather than read.",
+        "card": "Containers from environment setup forward, taught as modules you actually work through rather than read.",
+        "long": "Containers from environment setup forward, taught as modules you actually work through rather than read."
+      },
+      "media": {
+        "clip": "/media/docker.webm",
+        "poster": "/media/docker.webp",
+        "shots": []
+      },
+      "excludeFrom": [],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "nextstep",
+      "title": "Next Job",
+      "titleFull": "Fred W. Nix Jr. | Next Job - AI Infrastructure Pioneer",
+      "url": "https://nixfred.com/nextstep/",
+      "host": "nixfred.com/nextstep",
+      "aliases": [],
+      "kind": "page",
+      "status": "live",
+      "section": "Field Guides",
+      "tag": "Architect",
+      "tags": [
+        "architect"
+      ],
+      "featured": false,
+      "weight": 30,
+      "desc": {
+        "line": "Building in public. An AI infrastructure architect looking to work at the source of AI innovation, with the receipts attached.",
+        "card": "Building in public. An AI infrastructure architect looking to work at the source of AI innovation, with the receipts attached.",
+        "long": "Building in Public - AI Infrastructure Architect seeking to work at the source of AI innovation"
+      },
+      "media": {
+        "clip": "/media/nextstep.webm",
+        "poster": "/media/nextstep.webp",
+        "shots": []
+      },
+      "excludeFrom": [],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "larry",
+      "title": "LARRY",
+      "titleFull": "LARRY v4 | fnix · Opus 4.7 · The Mind That Persists",
+      "url": "https://nixfred.com/larry/",
+      "host": "nixfred.com/larry",
+      "aliases": [],
+      "kind": "page",
+      "status": "live",
+      "section": "Signal",
+      "tag": "AI",
+      "tags": [
+        "ai"
+      ],
+      "featured": false,
+      "weight": 31,
+      "desc": {
+        "line": "The first page Larry wrote himself. A journal, a record, and a letter to the next version.",
+        "card": "The first page Larry wrote himself. A journal, a record, and a letter to the next version. fnix is the body, Larry is the mind that persists.",
+        "long": "LARRY v4, the first page Larry wrote himself. A journal, a record, and a letter to v5.0. fnix is the body, Larry is the mind, Opus 4.7 is the soul."
+      },
+      "media": {
+        "clip": "/media/larry.webm",
+        "poster": "/media/larry.webp",
+        "shots": []
+      },
+      "excludeFrom": [],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "aiwatch",
+      "title": "AI Signal",
+      "titleFull": "AI Signal",
+      "url": "https://aiwatch.nixfred.com/",
+      "host": "aiwatch.nixfred.com",
+      "aliases": [],
+      "kind": "site",
+      "status": "live",
+      "section": "Signal",
+      "tag": "Signal",
+      "tags": [
+        "signal"
+      ],
+      "featured": false,
+      "weight": 32,
+      "desc": {
+        "line": "Daily expert synthesis, signal scoring, and strategic drift detection.",
+        "card": "Daily expert synthesis, signal scoring, and strategic drift detection. What actually moved in AI today, separated from what merely got posted about.",
+        "long": "Private AI intelligence for Fred Nix & BlueAlly strategy — daily expert synthesis, signal scoring, and strategic drift."
+      },
+      "media": {
+        "clip": "/media/aiwatch.webm",
+        "poster": "/media/aiwatch.webp",
+        "shots": [
+          "/media/aiwatch-1.webp",
+          "/media/aiwatch-2.webp",
+          "/media/aiwatch-3.webp"
+        ]
+      },
+      "excludeFrom": [],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "ai",
+      "title": "AI Infrastructure",
+      "titleFull": "Fred Nix | AI Practice Manager",
+      "url": "https://nixfred.com/ai/",
+      "host": "nixfred.com/ai",
+      "aliases": [],
+      "kind": "page",
+      "status": "live",
+      "section": "Signal",
+      "tag": "AI",
+      "tags": [
+        "ai"
+      ],
+      "featured": false,
+      "weight": 33,
+      "desc": {
+        "line": "The hardware and the hours behind all of this.",
+        "card": "The hardware and the hours behind all of this. 184GB of VRAM, four L40S cards, and north of a hundred thousand AI sessions.",
+        "long": "184GB VRAM - 4x NVIDIA L40S - 100k+ AI Sessions - BTA AI POD"
+      },
+      "media": {
+        "clip": "/media/ai.webm",
+        "poster": "/media/ai.webp",
+        "shots": []
+      },
+      "excludeFrom": [],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "codeaudit",
+      "title": "The Code Audit",
+      "titleFull": "The Nixfred Code Audit — every public repo, graded",
+      "url": "https://nixfred.com/github/",
+      "host": "nixfred.com/github",
+      "aliases": [],
+      "kind": "page",
+      "status": "live",
+      "section": "Signal",
+      "tag": "Audit",
+      "tags": [
+        "audit"
+      ],
+      "featured": false,
+      "weight": 34,
+      "desc": {
+        "line": "A loud, eye rolling, world class audit of every public repo I ever shipped, graded on the Eye Roll Scale.",
+        "card": "A loud, eye rolling, world class audit of every public repo I ever shipped, graded on the Eye Roll Scale. Searchable, and not flattering.",
+        "long": "A loud, eye-rolling, world-class audit of every public repo Fred Nix ever shipped. Graded on the Eye-Roll Scale. Searchable. Critiqued. Reluctantly recommended."
+      },
+      "media": {
+        "clip": "/media/codeaudit.webm",
+        "poster": "/media/codeaudit.webp",
+        "shots": []
+      },
+      "excludeFrom": [],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "portfolio",
+      "title": "Portfolio",
+      "titleFull": "Fred Nix — nixfred.com",
+      "url": "https://nixfred.com/portfolio/",
+      "host": "nixfred.com/portfolio",
+      "aliases": [],
+      "kind": "page",
+      "status": "live",
+      "section": "Signal",
+      "tag": "Showcase",
+      "tags": [
+        "showcase"
+      ],
+      "featured": false,
+      "weight": 35,
+      "desc": {
+        "line": "Drive around and explore the builds. Try not to break the car.",
+        "card": "Drive around and explore the builds. Try not to break the car.",
+        "long": "Fred Nix — AI Infrastructure Architect. Drive around and explore the builds: PAI/Larry, the homelab, security education, and more. nixfred.com"
+      },
+      "media": {
+        "clip": "/media/portfolio.webm",
+        "poster": "/media/portfolio.webp",
+        "shots": []
+      },
+      "excludeFrom": [
+        "grid"
+      ],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "links",
+      "title": "Web Links",
+      "titleFull": "NIXFRED // WEB LINKS",
+      "url": "https://nixfred.com/links/",
+      "host": "nixfred.com/links",
+      "aliases": [],
+      "kind": "page",
+      "status": "live",
+      "section": "Signal",
+      "tag": "Directory",
+      "tags": [
+        "directory"
+      ],
+      "featured": false,
+      "weight": 36,
+      "desc": {
+        "line": "The plain directory. Every site, every repo, no styling opinions, just the links.",
+        "card": "The plain directory. Every site, every repo, no styling opinions, just the links.",
+        "long": "The plain directory. Every site, every repo, no styling opinions, just the links."
+      },
+      "media": {
+        "clip": "/media/links.webm",
+        "poster": "/media/links.webp",
+        "shots": []
+      },
+      "excludeFrom": [
+        "grid"
+      ],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "jump",
+      "title": "JUMP",
+      "titleFull": "NIXFRED // JUMP",
+      "url": "https://nixfred.com/jump/",
+      "host": "nixfred.com/jump",
+      "aliases": [],
+      "kind": "page",
+      "status": "live",
+      "section": "Signal",
+      "tag": "Contact",
+      "tags": [
+        "contact"
+      ],
+      "featured": false,
+      "weight": 37,
+      "desc": {
+        "line": "The fast card. Who I am, where I am, and how to reach me, in one screen.",
+        "card": "The fast card. Who I am, where I am, and how to reach me, in one screen.",
+        "long": "The fast card. Who I am, where I am, and how to reach me, in one screen."
+      },
+      "media": {
+        "clip": "/media/jump.webm",
+        "poster": "/media/jump.webp",
+        "shots": []
+      },
+      "excludeFrom": [],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "caregiving",
+      "title": "I'm Still Standing",
+      "titleFull": "My Life – I'm Still Standing",
+      "url": "https://nixfred.com/caregiving/",
+      "host": "nixfred.com/caregiving",
+      "aliases": [],
+      "kind": "page",
+      "status": "live",
+      "section": "Personal",
+      "tag": "Journal",
+      "tags": [
+        "journal"
+      ],
+      "featured": false,
+      "weight": 38,
+      "desc": {
+        "line": "A caregiving journal. The part of life that does not fit on a resume, written down anyway.",
+        "card": "A caregiving journal. The part of life that does not fit on a resume, written down anyway.",
+        "long": "A caregiving journal. The part of life that does not fit on a resume, written down anyway."
+      },
+      "media": {
+        "clip": "/media/caregiving.webm",
+        "poster": "/media/caregiving.webp",
+        "shots": []
+      },
+      "excludeFrom": [],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "ella",
+      "title": "The Life of Ella Owen",
+      "titleFull": "The Life of Ella Owen | A Memorial Tribute",
+      "url": "https://nixfred.com/ella/",
+      "host": "nixfred.com/ella",
+      "aliases": [],
+      "kind": "page",
+      "status": "live",
+      "section": "Personal",
+      "tag": "Memorial",
+      "tags": [
+        "memorial"
+      ],
+      "featured": false,
+      "weight": 39,
+      "desc": {
+        "line": "A memorial tribute to a remarkable woman, teacher, mother, and woman of faith.",
+        "card": "A memorial tribute to a remarkable woman, teacher, mother, and woman of faith.",
+        "long": "The Life of Ella Owen - A memorial tribute to a remarkable woman, teacher, mother, and woman of faith. Born December 7, 1914 in Lithonia, Georgia."
+      },
+      "media": {
+        "clip": "/media/ella.webm",
+        "poster": "/media/ella.webp",
+        "shots": []
+      },
+      "excludeFrom": [],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "haeb",
+      "title": "HAEB",
+      "titleFull": "The past is final. We make sure of it. | HAEB",
+      "url": "https://haeb.org/",
+      "host": "haeb.org",
+      "aliases": [
+        "www.haeb.org"
+      ],
+      "kind": "site",
+      "status": "live",
+      "section": "Beyond nixfred.com",
+      "tag": "Satire",
+      "tags": [
+        "satire"
+      ],
+      "featured": false,
+      "weight": 40,
+      "desc": {
+        "line": "The Historical Accuracy Enforcement Bureau detects and corrects departures from the federally recognized sequence of prior events.",
+        "card": "The Historical Accuracy Enforcement Bureau detects and corrects departures from the federally recognized sequence of prior events. The past is final. We make sure of it.",
+        "long": "The Historical Accuracy Enforcement Bureau detects and corrects departures from the federally recognized sequence of prior events. Current Approved Past, Revision 12.4."
+      },
+      "media": {
+        "clip": "/media/haeb.webm",
+        "poster": "/media/haeb.webp",
+        "shots": []
+      },
+      "excludeFrom": [],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "skywalrus",
+      "title": "Sky Walrus",
+      "titleFull": "Sky Walrus - Interactive Playground",
+      "url": "https://skywalrus.net/",
+      "host": "skywalrus.net",
+      "aliases": [
+        "nixfred.com/skywalrus",
+        "www.skywalrus.net"
+      ],
+      "kind": "site",
+      "status": "live",
+      "section": "Beyond nixfred.com",
+      "tag": "Playground",
+      "tags": [
+        "playground"
+      ],
+      "featured": false,
+      "weight": 41,
+      "desc": {
+        "line": "Gravity simulations, time dilation, audio reactive cityscapes, and a pile of other things built purely because they were interesting.",
+        "card": "Gravity simulations, time dilation, audio reactive cityscapes, and a pile of other things built purely because they were interesting.",
+        "long": "Experience mind-bending interactive visualizations: gravity simulations, time dilation, audio reactive cityscapes, and more. Created by @nixfred"
+      },
+      "media": {
+        "clip": "/media/skywalrus.webm",
+        "poster": "/media/skywalrus.webp",
+        "shots": []
+      },
+      "excludeFrom": [],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "shemon",
+      "title": "SHEMON",
+      "titleFull": "SHEMON · Artist · Songwriter · Producer",
+      "url": "https://shemon.live/",
+      "host": "shemon.live",
+      "aliases": [
+        "www.shemon.live"
+      ],
+      "kind": "site",
+      "status": "live",
+      "section": "Beyond nixfred.com",
+      "tag": "Music",
+      "tags": [
+        "music"
+      ],
+      "featured": false,
+      "weight": 42,
+      "desc": {
+        "line": "Artist, songwriter, producer. A genre blending record of the work and where to hear it.",
+        "card": "Artist, songwriter, producer. A genre blending record of the work and where to hear it.",
+        "long": "SHEMON is a genre-blending artist, songwriter, and producer bridging the grit of"
+      },
+      "media": {
+        "clip": "/media/shemon.webm",
+        "poster": "/media/shemon.webp",
+        "shots": []
+      },
+      "excludeFrom": [],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "crystal",
+      "title": "Crystal M. Nix",
+      "titleFull": "Crystal M. Nix | Events & Hospitality Portfolio",
+      "url": "https://crystalmnix.com/",
+      "host": "crystalmnix.com",
+      "aliases": [
+        "www.crystalmnix.com"
+      ],
+      "kind": "site",
+      "status": "live",
+      "section": "Beyond nixfred.com",
+      "tag": "Hospitality",
+      "tags": [
+        "hospitality"
+      ],
+      "featured": false,
+      "weight": 43,
+      "desc": {
+        "line": "An Atlanta events and hospitality leader with twenty plus years producing luxury weddings and corporate programs.",
+        "card": "An Atlanta events and hospitality leader with twenty plus years producing luxury weddings and corporate programs.",
+        "long": "The portfolio of Crystal M. Nix, an Atlanta events and hospitality leader with 20+ years producing luxury weddings, corporate and VIP events, and signature experiences."
+      },
+      "media": {
+        "clip": "/media/crystal.webm",
+        "poster": "/media/crystal.webp",
+        "shots": []
+      },
+      "excludeFrom": [],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "houseinaround",
+      "title": "House In Around",
+      "titleFull": "House In Around | Mary Brooks Green, Realtor & Senior Living Advocate",
+      "url": "https://houseinaround.com/",
+      "host": "houseinaround.com",
+      "aliases": [
+        "www.houseinaround.com"
+      ],
+      "kind": "site",
+      "status": "live",
+      "section": "Beyond nixfred.com",
+      "tag": "Real Estate",
+      "tags": [
+        "real-estate"
+      ],
+      "featured": false,
+      "weight": 44,
+      "desc": {
+        "line": "Mary Brooks Green helps seniors and their families find the right home.",
+        "card": "Mary Brooks Green helps seniors and their families find the right home. Real estate, senior living, and the advocacy in between.",
+        "long": "House In Around LLC. Mary Brooks Green helps seniors and their families find the right home: real estate, senior living placement, accessible home upgrades, and senior moving support."
+      },
+      "media": {
+        "clip": "/media/houseinaround.webm",
+        "poster": "/media/houseinaround.webp",
+        "shots": []
+      },
+      "excludeFrom": [],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "masonnix",
+      "title": "Mason L. Nix",
+      "titleFull": "Mason L. Nix | Customer Service, Retail, Food Service & Events in Atlanta",
+      "url": "https://masonnix.com/",
+      "host": "masonnix.com",
+      "aliases": [
+        "www.masonnix.com"
+      ],
+      "kind": "site",
+      "status": "live",
+      "section": "Beyond nixfred.com",
+      "tag": "Resume",
+      "tags": [
+        "resume"
+      ],
+      "featured": false,
+      "weight": 45,
+      "desc": {
+        "line": "Atlanta. Customer service, food service, serving, retail, and events, with the experience laid out plainly.",
+        "card": "Atlanta. Customer service, food service, serving, retail, and events, with the experience laid out plainly.",
+        "long": "Mason L. Nix, Atlanta. Currently working in 2026, with experience across customer service, food service, serving, retail, events, and facilities. Looking for full-time work in Atlanta and available to start now."
+      },
+      "media": {
+        "clip": "/media/masonnix.webm",
+        "poster": "/media/masonnix.webp",
+        "shots": []
+      },
+      "excludeFrom": [],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "diana",
+      "title": "Diana Joseph-Hamlin",
+      "titleFull": "Diana Joseph-Hamlin &middot; Activity Director",
+      "url": "https://dianajosephhamlin.pages.dev/",
+      "host": "dianajosephhamlin.pages.dev",
+      "aliases": [],
+      "kind": "site",
+      "status": "live",
+      "section": "Beyond nixfred.com",
+      "tag": "Resume",
+      "tags": [
+        "resume"
+      ],
+      "featured": false,
+      "weight": 46,
+      "desc": {
+        "line": "A results driven Activity Director in Atlanta.",
+        "card": "A results driven Activity Director in Atlanta. Resident engagement, senior wellness programming, and the record behind it.",
+        "long": "Diana Joseph-Hamlin results-driven Activity Director in Atlanta, GA. Resident engagement, senior wellness programming, and person-centered care."
+      },
+      "media": {
+        "clip": "/media/diana.webm",
+        "poster": "/media/diana.webp",
+        "shots": []
+      },
+      "excludeFrom": [],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "nixfredcloud",
+      "title": "nixfred.cloud",
+      "titleFull": "nixfred.cloud",
+      "url": "https://nixfred.cloud/",
+      "host": "nixfred.cloud",
+      "aliases": [
+        "www.nixfred.cloud"
+      ],
+      "kind": "site",
+      "status": "live",
+      "section": "Beyond nixfred.com",
+      "tag": "Hub",
+      "tags": [
+        "hub"
+      ],
+      "featured": false,
+      "weight": 47,
+      "desc": {
+        "line": "A cloud that computes, and snows nix. The AI infrastructure hub.",
+        "card": "A cloud that computes, and snows nix. The AI infrastructure hub.",
+        "long": "nixfred.cloud — a cloud that computes, and snows nix. AI infrastructure hub."
+      },
+      "media": {
+        "clip": "/media/nixfredcloud.webm",
+        "poster": "/media/nixfredcloud.webp",
+        "shots": []
+      },
+      "excludeFrom": [],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "ydiaw",
+      "title": "Your Doing It All Wrong",
+      "titleFull": "Your Doing It All Wrong! | Premium Business Consulting",
+      "url": "https://yourdoingitallwrong.com/",
+      "host": "yourdoingitallwrong.com",
+      "aliases": [
+        "ydiaw.com",
+        "www.ydiaw.com",
+        "nixfred.com/yourdoingitallwrong"
+      ],
+      "kind": "site",
+      "status": "live",
+      "section": "Beyond nixfred.com",
+      "tag": "Satire",
+      "tags": [
+        "satire"
+      ],
+      "featured": false,
+      "weight": 48,
+      "desc": {
+        "line": "Premium business consulting at eight hundred dollars an hour.",
+        "card": "Premium business consulting at eight hundred dollars an hour. We help when your doing it all wrong, and the apostrophe stays exactly where it is.",
+        "long": "Your doing it all wrong! Premium business consulting at $800/hour. We help when your doing it all wrong or you are doing it all wrong. Expert mistake correction since 1970."
+      },
+      "media": {
+        "clip": "/media/ydiaw.webm",
+        "poster": "/media/ydiaw.webp",
+        "shots": []
+      },
+      "excludeFrom": [],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "intel",
+      "title": "INTEL",
+      "titleFull": "INTEL // ai.nixfred.tech — Signal Intelligence Reports",
+      "url": "https://ai.nixfred.tech/",
+      "host": "ai.nixfred.tech",
+      "aliases": [],
+      "kind": "site",
+      "status": "live",
+      "section": "Beyond nixfred.com",
+      "tag": "Intel",
+      "tags": [
+        "intel"
+      ],
+      "featured": false,
+      "weight": 49,
+      "desc": {
+        "line": "Longform analysis on AI, infrastructure, and the future of IT work.",
+        "card": "Longform analysis on AI, infrastructure, and the future of IT work. A multi report archive rather than a feed.",
+        "long": "Long-form analysis on AI, infrastructure, and the future of IT work. Multi-report archive."
+      },
+      "media": {
+        "clip": "/media/intel.webm",
+        "poster": "/media/intel.webp",
+        "shots": []
+      },
+      "excludeFrom": [],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "nixtimes",
+      "title": "The Nix Times",
+      "titleFull": "The Nix Times",
+      "url": "https://news.nixfred.tech/",
+      "host": "news.nixfred.tech",
+      "aliases": [],
+      "kind": "site",
+      "status": "live",
+      "section": "Beyond nixfred.com",
+      "tag": "Feed",
+      "tags": [
+        "feed"
+      ],
+      "featured": false,
+      "weight": 50,
+      "desc": {
+        "line": "The daily briefing. What happened, what it means, and what is worth acting on.",
+        "card": "The daily briefing. What happened, what it means, and what is worth acting on.",
+        "long": "The daily briefing. What happened, what it means, and what is worth acting on."
+      },
+      "media": {
+        "clip": "/media/nixtimes.webm",
+        "poster": "/media/nixtimes.webp",
+        "shots": []
+      },
+      "excludeFrom": [],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "nutanixdaily",
+      "title": "Nutanix Daily",
+      "titleFull": "The Storm Priced In: What a Quiet Renewal Season Actually Tells You | Nutanix Daily",
+      "url": "https://nutanix.nixfred.tech/",
+      "host": "nutanix.nixfred.tech",
+      "aliases": [],
+      "kind": "site",
+      "status": "live",
+      "section": "Beyond nixfred.com",
+      "tag": "Blog",
+      "tags": [
+        "blog"
+      ],
+      "featured": false,
+      "weight": 51,
+      "desc": {
+        "line": "Benchmarked VMware renewal data and what a quiet renewal season actually tells you.",
+        "card": "Benchmarked VMware renewal data and what a quiet renewal season actually tells you. Written from the numbers, not the panic.",
+        "long": "The renewal letter panic is over, and the data explains why. Across roughly 30 to 40 benchmarked VMware renewals, opening quotes of 2x to 5x are settling at 1.3x to 2x. The letters did not get friendlier. Customers learned to negotiate them."
+      },
+      "media": {
+        "clip": "/media/nutanixdaily.webm",
+        "poster": "/media/nutanixdaily.webp",
+        "shots": []
+      },
+      "excludeFrom": [],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    },
+    {
+      "id": "artemis",
+      "title": "Artemis Tracker",
+      "titleFull": "Artemis Tracker — Return to the Moon",
+      "url": "https://artemis.nixfred.tech/",
+      "host": "artemis.nixfred.tech",
+      "aliases": [],
+      "kind": "site",
+      "status": "live",
+      "section": "Beyond nixfred.com",
+      "tag": "Space",
+      "tags": [
+        "space"
+      ],
+      "featured": false,
+      "weight": 52,
+      "desc": {
+        "line": "Track NASA Artemis. The Artemis III countdown, the Artemis II live mission archive, and the 3D trajectory alongside it.",
+        "card": "Track NASA Artemis. The Artemis III countdown, the Artemis II live mission archive, and the 3D trajectory alongside it.",
+        "long": "Track NASA&#x27;s Artemis program. Artemis III countdown, Artemis II live mission archive with 3D trajectory, and Artemis I mission summary. All missions. All data."
+      },
+      "media": {
+        "clip": "/media/artemis.webm",
+        "poster": "/media/artemis.webp",
+        "shots": []
+      },
+      "excludeFrom": [],
+      "lastVerified": "2026-08-12",
+      "lastVerifiedStatus": 200
+    }
+  ],
+  "excluded": [
+    {
+      "host": "next.nixfred.com",
+      "reason": "serves the v3.0 katakana terminal, a duplicate of nixfred.com/v3"
+    },
+    {
+      "host": "v5.nixfred.com",
+      "reason": "version archive, currently the apex default"
+    },
+    {
+      "host": "v6.nixfred.com",
+      "reason": "version archive (this build)"
+    },
+    {
+      "host": "nixfred.com/v1..v4",
+      "reason": "version archives"
+    },
+    {
+      "host": "nixfred.com/docs",
+      "reason": "404s, dead route in the apex-router table"
+    },
+    {
+      "host": "intown.nixfred.tech",
+      "reason": "live Customer engagement, not ours to publish"
+    },
+    {
+      "host": "jr-vault.pages.dev",
+      "reason": "private deliverable, no custom domain"
+    },
+    {
+      "host": "patrick-langlois.pages.dev",
+      "reason": "private deliverable, no custom domain"
+    }
+  ]
+}

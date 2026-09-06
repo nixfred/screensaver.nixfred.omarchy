@@ -1,0 +1,9 @@
+#!/usr/bin/env python3
+"""ORRERY - the nixfred fleet, as an orbital model."""
+import os
+import sys
+
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__)))))
+from orrery.main import main
+
+sys.exit(main())
