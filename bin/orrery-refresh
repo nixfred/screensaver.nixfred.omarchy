@@ -1,0 +1,150 @@
+#!/usr/bin/env python3
+"""Rebuild the ORRERY's local cache. Run this awake, never while idle.
+
+Fetches the master registry, writes ~/.local/share/orrery/fleet.json, and
+merges Larry's commentary so that:
+
+  - hand-written lines are never overwritten
+  - sites added to sites.json show up with lines waiting to be written
+  - sites removed from the registry keep their lines parked, not deleted
+
+With --larry it will ask the local `claude` CLI to write lines for sites
+that do not have any yet. That is the only part that talks to a model, and
+it only ever runs here, on demand, with the machine awake.
+"""
+
+import argparse
+import json
+import os
+import subprocess
+import sys
+import urllib.request
+
+REGISTRY = "https://nixfred.com/sites.json"
+DATA = os.path.expanduser("~/.local/share/orrery")
+BUNDLED = os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), "data")
+
+VOICE = """You are Larry, the persistent agent described at nixfred.com/larry.
+You wrote the Eye Roll Scale that grades every repo at nixfred.com/github.
+Write at most two short lines about the site below, for a screensaver that
+shows one site at a time.
+
+Rules:
+- Under 70 characters per line. No markdown, no quotes, no emoji.
+- You are not a hype man. You are allowed to be bored, suspicious, or rude.
+- Never open with "A" or "An". Never use the words "showcase" or "journey".
+- Specific beats admiring. If it is unremarkable, say something else true.
+
+Return JSON only: {"lines": ["...", "..."]}
+"""
+
+
+def fetch(url, timeout=25):
+    req = urllib.request.Request(url, headers={"User-Agent": "orrery/1.0"})
+    with urllib.request.urlopen(req, timeout=timeout) as r:
+        return json.load(r)
+
+
+def load(path, fallback):
+    try:
+        with open(path) as fh:
+            return json.load(fh)
+    except Exception:
+        try:
+            with open(fallback) as fh:
+                return json.load(fh)
+        except Exception:
+            return None
+
+
+def ask_claude(site):
+    prompt = "%s\n\nid: %s\ntitle: %s\nhost: %s\nsection: %s\nabout: %s\n" % (
+        VOICE, site.get("id"), site.get("title"), site.get("host"),
+        site.get("section"), (site.get("desc") or {}).get("card", ""))
+    try:
+        out = subprocess.run(["claude", "-p", prompt], capture_output=True,
+                             text=True, timeout=120)
+        if out.returncode != 0:
+            return None
+        txt = out.stdout.strip()
+        start, end = txt.find("{"), txt.rfind("}")
+        if start < 0 or end < 0:
+            return None
+        lines = json.loads(txt[start:end + 1]).get("lines") or []
+        return [l.strip() for l in lines if l.strip()][:2] or None
+    except Exception:
+        return None
+
+
+def main():
+    ap = argparse.ArgumentParser(prog="orrery-refresh")
+    ap.add_argument("--url", default=REGISTRY)
+    ap.add_argument("--larry", action="store_true",
+                    help="write Larry lines for sites that lack them, via the claude CLI")
+    ap.add_argument("--offline", action="store_true",
+                    help="re-merge from the cached registry without fetching")
+    args = ap.parse_args()
+
+    os.makedirs(DATA, exist_ok=True)
+    fleet_path = os.path.join(DATA, "fleet.json")
+    larry_path = os.path.join(DATA, "larry.json")
+
+    if args.offline:
+        reg = load(fleet_path, os.path.join(BUNDLED, "fleet.json"))
+        if reg is None:
+            print("orrery-refresh: no cached registry to re-merge", file=sys.stderr)
+            return 1
+    else:
+        try:
+            reg = fetch(args.url)
+        except Exception as e:
+            print("orrery-refresh: fetch failed (%s); keeping the existing cache" % e,
+                  file=sys.stderr)
+            return 1
+        sites = reg.get("sites")
+        if not isinstance(sites, list) or not sites:
+            print("orrery-refresh: registry has no sites; refusing to overwrite cache",
+                  file=sys.stderr)
+            return 1
+        tmp = fleet_path + ".tmp"
+        with open(tmp, "w") as fh:
+            json.dump(reg, fh, indent=1)
+        os.replace(tmp, fleet_path)
+        print("registry: %d sites -> %s" % (len(sites), fleet_path))
+
+    larry = load(larry_path, os.path.join(BUNDLED, "larry.json")) or {
+        "version": 1, "sites": {}, "sections": {}, "ambient": {}}
+    lsites = larry.setdefault("sites", {})
+
+    live = [s for s in reg.get("sites", []) if s.get("status") == "live"]
+    ids = {s.get("id") for s in live}
+    missing = [s for s in live if s.get("id") not in lsites and s.get("id") != "dad"]
+    parked = sorted(set(lsites) - ids)
+
+    if missing:
+        print("no Larry lines yet: %s" % ", ".join(s["id"] for s in missing))
+        if args.larry:
+            for s in missing:
+                lines = ask_claude(s)
+                if lines:
+                    lsites[s["id"]] = lines
+                    print("  + %-14s %s" % (s["id"], lines[0][:60]))
+                else:
+                    print("  ! %-14s (generation failed, left blank)" % s["id"])
+    if parked:
+        print("parked (no longer in the registry, lines kept): %s" % ", ".join(parked))
+
+    for sec in reg.get("sectionOrder", []):
+        larry.setdefault("sections", {}).setdefault(sec, [])
+
+    tmp = larry_path + ".tmp"
+    with open(tmp, "w") as fh:
+        json.dump(larry, fh, indent=1, ensure_ascii=False)
+    os.replace(tmp, larry_path)
+    print("larry: %d sites with lines -> %s" % (
+        sum(1 for v in lsites.values() if v), larry_path))
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

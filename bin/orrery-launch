@@ -1,0 +1,76 @@
+#!/bin/bash
+# Open the ORRERY fullscreen on every monitor.
+#
+# Deliberately reuses Omarchy's screensaver window class so the compositor
+# treats it exactly like the stock screensaver -- same window rules, same
+# behaviour -- while running none of Omarchy's packaged code.
+
+set -u
+
+ROOT="$(cd "$(dirname "$(readlink -f "$0")")/.." && pwd)"
+CLASS="org.omarchy.screensaver"
+
+# Already up? Ask the compositor, not pgrep -- a `pgrep -f` on the class
+# name also matches any shell whose command line happens to mention it,
+# including the one that invoked this script.
+if hyprctl clients -j 2>/dev/null | jq -e \
+     --arg c "$CLASS" 'any(.[]; .class == $c)' >/dev/null 2>&1; then
+  exit 0
+fi
+
+# Omarchy's launcher takes a literal `force` argument meaning "start even if
+# the screensaver is toggled off". Accept and drop it: everything else is
+# forwarded to the renderer.
+ARGS=()
+for a in "$@"; do
+  [[ $a == force ]] || ARGS+=("$a")
+done
+
+command -v foot >/dev/null || { echo "orrery: foot is required" >&2; exit 1; }
+
+focused=$(hyprctl monitors -j | jq -r '.[] | select(.focused) | .name' 2>/dev/null)
+
+hypr_focus() { hyprctl dispatch "hl.dsp.focus({ monitor = \"$1\" })" >/dev/null 2>&1 \
+  || hyprctl dispatch focusmonitor "$1" >/dev/null 2>&1; }
+
+hypr_exec() {
+  local cmd
+  printf -v cmd '%q ' "$@"
+  hyprctl dispatch "hl.dsp.exec_cmd([[$cmd]])" >/dev/null 2>&1 \
+    || hyprctl dispatch exec -- bash -lc "$cmd" >/dev/null 2>&1
+}
+
+SOCKET="$XDG_RUNTIME_DIR/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.socket2.sock"
+if command -v socat >/dev/null && [[ -S $SOCKET ]]; then
+  exec {events}< <(socat -U - "UNIX-CONNECT:$SOCKET" 2>/dev/null)
+fi
+
+wait_for_window() {
+  [[ -n ${events:-} ]] || { sleep 0.4; return 0; }
+  local line deadline=$((SECONDS + 5))
+  while ((SECONDS < deadline)) && IFS= read -r -t $((deadline - SECONDS)) -u "$events" line; do
+    [[ $line == openwindow\>\>*,$CLASS,* ]] && return 0
+  done
+}
+
+MONITORS=$(hyprctl monitors -j | jq -r '.[] | .name')
+MULTI=$(( $(printf '%s\n' "$MONITORS" | grep -c .) > 1 ))
+
+for m in $MONITORS; do
+  # Focusing a monitor warps the pointer, and Hyprland animates the warp --
+  # which the screensaver reads as the user moving the mouse. Only worth
+  # paying that cost when there is more than one monitor to walk.
+  (( MULTI )) && hypr_focus "$m"
+  hypr_exec foot --app-id="$CLASS" --config="$ROOT/config/foot-orrery.ini" \
+    --fullscreen -e "$ROOT/bin/orrery" "${ARGS[@]+"${ARGS[@]}"}"
+  wait_for_window
+done
+
+# Restoring focus is only meaningful with more than one monitor, and
+# focusing a monitor warps the pointer -- which the screensaver correctly
+# reads as the user moving the mouse, and exits. So don't, unless there is
+# actually a different monitor to go back to.
+if [[ -n $focused ]] && (( $(hyprctl monitors -j | jq 'length') > 1 )); then
+  hypr_focus "$focused"
+fi
+exit 0

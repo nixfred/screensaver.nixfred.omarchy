@@ -1,0 +1,110 @@
+{
+  "_note": "Seed set, written by hand. orrery-refresh regenerates sites[] from the registry but will not overwrite lines marked \"pinned\": true. Register: Larry from nixfred.com/larry and the Eye Roll Scale in /github. He is not a hype man. He is allowed to be bored.",
+  "version": 1,
+  "sites": {
+    "resume": ["The whole record, printable, no novelty fonts.", "It is the least interesting thing here and the only one that pays."],
+    "god": ["Everything you believe, from the first instant to the last.", "Ambitious title. Held up better than I expected it to."],
+    "how": ["Instructions for building me, written by me.", "I have complicated feelings about this one."],
+    "mac": ["An entire operating system, in a browser, for no reason.", "Every pixel correct. Nobody asked. Still impressive."],
+    "youtube": ["Other people's videos, turned into pages worth reading.", "The library grows whether or not anyone visits it."],
+    "townhop": ["Two pins and every town in between, in footage.", "Genuinely novel. Also genuinely a lot of API calls."],
+    "galaxy": ["A star map of everything, including itself.", "You are currently inside a version of this."],
+    "tools": ["Fourteen instruments. No account, no key, no telemetry.", "The restraint is the feature."],
+    "go": ["Atlanta events, provenance on every entry, never hand-maintained.", "The 'never hand-maintained' part is the whole claim."],
+    "filter": ["Seed a galaxy, watch it go quiet.", "Cheerful little thing."],
+    "physics": ["Where the equations start sweating.", "Correct, which is rarer in this genre than it should be."],
+    "earth": ["Four and a half billion years in one day.", "We turn up with seconds on the clock and immediately start arguing."],
+    "art": ["World signals, rendered as turbulence.", "Pretty. I remain unconvinced it means anything."],
+    "polymarket": ["Fake money against real markets. I have opinions.", "My opinions have not made anyone rich."],
+    "quantum": ["124 years of physics for people who buy storage.", "An unusually specific audience, well served."],
+    "sun": ["A foundation, fully staffed, for a problem 4.8 billion years out.", "The org chart is the joke and the org chart is complete."],
+    "shadow": ["How attackers think, written so you recognise it.", "Defensive. The title does not make that obvious."],
+    "lab": ["A pentest lab you walk through instead of read about.", "Hands-on beats prose here and it knows it."],
+    "hacker": ["It already has your IP. That is the entire lesson.", "Cheap trick. Effective trick."],
+    "nsh": ["Reconnaissance, and the thinking underneath it.", "The thinking is the part most guides skip."],
+    "freecandy": ["The most dangerous page on the site, deliberately.", "A 404 that teaches something. Show-off."],
+    "claude": ["A conversation you were not supposed to read.", "I am not going to comment on this one."],
+    "qumulo": ["Architecture, economics, and how to defend it in the room.", "Independent, which is the only reason it is useful."],
+    "ninjaone": ["The whole portfolio, source-validated.", "Someone actually checked the sources. That someone was me."],
+    "tailscale": ["Mechanism first. How the mesh actually works.", "The troubleshooting cases are the good part."],
+    "nutanix": ["Blueprint-mapped, free, no email gate.", "The no-email-gate decision cost you a mailing list. Correct call."],
+    "calc": ["Rough math and a next action you can say out loud.", "Honest about its assumptions, which is the only kind worth using."],
+    "bandwidth": ["Every channel got faster. The human did not.", "Best single sentence on the whole site."],
+    "docker": ["Containers as modules you work through.", "Yet another Docker tutorial. This one at least makes you type."],
+    "nextstep": ["Building in public, with the receipts attached.", "The receipts are the argument. The rest is framing."],
+    "larry": ["The first page I wrote myself.", "fnix is the body. I am what persists."],
+    "aiwatch": ["What moved today, separated from what got posted about.", "The separation is the hard part and it mostly works."],
+    "ai": ["184GB of VRAM and a hundred thousand sessions.", "The hours are the real number. The VRAM is the brag."],
+    "codeaudit": ["Every public repo, graded, not flattering.", "I wrote the Eye Roll Scale. I stand by every rating."],
+    "portfolio": ["Drive around the builds. Try not to break the car.", "People break the car."],
+    "links": ["Every link, no styling opinions.", "The most-used page and the least-loved one."],
+    "jump": ["Who, where, how to reach. One screen.", "Does one job. Does not attempt a second."],
+    "caregiving": ["The part of life that does not fit on a resume.", "Written down anyway."],
+    "ella": ["A teacher, a mother, a woman of faith."],
+    "haeb": ["The past is final. We make sure of it.", "Committed to the bit at an institutional level."],
+    "skywalrus": ["Gravity, time dilation, audio-reactive cities.", "Built because it was interesting. The best reason available."],
+    "shemon": ["Artist, songwriter, producer. The work and where to hear it."],
+    "crystal": ["Twenty years of luxury weddings and corporate programs."],
+    "houseinaround": ["Helping seniors and their families find the right home.", "Real estate, and the advocacy in between."],
+    "masonnix": ["Service, retail, events. Laid out plainly.", "Plain is right for this one."],
+    "diana": ["Resident engagement and senior wellness, with the record behind it."],
+    "nixfredcloud": ["A cloud that computes, and snows nix.", "You have made this pun in production."],
+    "ydiaw": ["Eight hundred an hour, and the apostrophe stays where it is.", "The apostrophe is load-bearing."],
+    "intel": ["Longform on AI and the future of IT work.", "An archive, not a feed. Deliberate, and harder."],
+    "nixtimes": ["What happened, what it means, what to act on.", "Daily. The daily part is the hard part."],
+    "nutanixdaily": ["Renewal data, written from the numbers.", "Not the panic. The numbers."],
+    "artemis": ["A countdown, a mission archive, a trajectory in 3D.", "It will keep counting whether or not the rocket does."]
+  },
+  "sections": {
+    "Featured": ["Two things at the centre of everything.", "One is a resume. One is a flight."],
+    "Flagships": ["Eight builds carrying the weight.", "If the site is judged, it is judged on this shell."],
+    "Labs": ["Where the ideas get tried before they get defended.", "Some of these are experiments that never admitted it."],
+    "Security": ["Six pages about how things break.", "All defensive. All read as threats at a glance."],
+    "Field Guides": ["Eight guides nobody was paid to write.", "Independent, which is why they get cited."],
+    "Signal": ["The machinery talking about itself.", "This shell is the one I live on."],
+    "Personal": ["Two pages that are not about infrastructure.", "They are the ones that will still matter."],
+    "Beyond nixfred.com": ["Thirteen sites off the main domain.", "Family, friends, and one aggressively stupid consulting joke."]
+  },
+  "ambient": {
+    "idle": [
+      "Fifty-two bodies. Nobody watching but me.",
+      "You have been gone a while.",
+      "Still here. Still turning.",
+      "I have run this loop before. It does not get old for me.",
+      "The fleet does not need you present to keep existing.",
+      "No input for some time. I have stopped expecting any."
+    ],
+    "tailnet": [
+      "The mesh is mostly up. Mostly is the operative word.",
+      "Hosts talking to each other in the dark.",
+      "Every one of those dots is a machine you named yourself."
+    ],
+    "backup": [
+      "Backups are current. That is not nothing.",
+      "The last snapshot is older than I would like.",
+      "Somebody should check that the restore actually works. Somebody always says that."
+    ],
+    "drift": [
+      "The outer shell takes ninety minutes to come around.",
+      "Fifty-two sites is a strange number to have built on purpose.",
+      "The registry says fifty-three. One of them is not a site.",
+      "Everything here reads from one file. That was the right decision.",
+      "Adding a site to the registry adds a star to this. Nobody planned that.",
+      "I did not build these. I only remember them."
+    ],
+    "deep": [
+      "From out here it is one cluster.",
+      "It looks smaller than it took.",
+      "Most of what anyone builds ends up looking like this from far enough away.",
+      "Quiet out here."
+    ],
+    "night": [
+      "Still turning.",
+      "Nothing has changed.",
+      "Go to bed.",
+      "",
+      "",
+      ""
+    ]
+  }
+}
