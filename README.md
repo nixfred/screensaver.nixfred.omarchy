@@ -31,9 +31,11 @@ Larry narrates. He is pre-written and cached, never generated live.
   description, and what Larry makes of it.</sub>
 </p>
 
-## It does not loop, it descends
+## Stay on a movement until you choose the next
 
-Six movements, about 16 minutes before the last one, which never ends.
+Six movements. The selected movement repeats until you press `n` or `N`;
+The Long Night runs continuously. Nothing advances to another movement on
+a timer. The lengths below describe one cycle of each movement.
 
 | # | Movement | Length | What happens |
 |---|----------|--------|--------------|
@@ -116,6 +118,7 @@ orrery-stop                # stop it
 orrery --act 3             # preview a movement in the current terminal
 orrery --seek 412          # jump to a point in the program
 orrery --speed 16          # override the base speed (default 4)
+orrery --next-exits        # playlist mode: n/N returns status 75; Esc returns 0
 orrery-refresh             # re-pull the registry (awake only)
 orrery-refresh --larry     # ...and write Larry lines for any new sites
 ```
@@ -125,6 +128,7 @@ orrery-refresh --larry     # ...and write Larry lines for any new sites
 | Key | Does |
 |-----|------|
 | `Esc` | Stop it. The only thing that does. |
+| `n` / `N` | Jump live to the next movement; the last wraps back to Cold Start. |
 | `↑` | Faster — x1 → x2 → x3 → x4 → x5 |
 | `↓` | Slower — back down to x1 |
 
@@ -194,7 +198,7 @@ orrery/canvas.py      sparse braille compositor, frame diffing, palette
 orrery/font.py        5x7 bitmap font
 orrery/model.py       fleet, orbital mechanics, the aircraft, camera
 orrery/acts.py        the six movements
-orrery/input.py       escape-sequence tokeniser: Esc quits, arrows set speed
+orrery/input.py       escape-sequence tokeniser: Esc quits, n skips, arrows set speed
 orrery/larry.py       commentary selection, and the dad silence rule
 orrery/hud.py         status line, local sources only
 tools/render_frames.py  renders frames to PPM with no screen and no font,

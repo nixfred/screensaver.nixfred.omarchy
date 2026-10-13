@@ -2,6 +2,7 @@
 
 Escape is the only thing that stops the screensaver. Not the mouse, not a
 stray keypress, not the window losing focus. Up and down arrow change speed.
+n or N skips to the next movement.
 Everything else is swallowed.
 
 That makes correct escape-sequence parsing load-bearing rather than a nicety:
@@ -31,6 +32,7 @@ def _trace(msg):
 QUIT = "quit"
 FASTER = "faster"
 SLOWER = "slower"
+NEXT = "next"
 
 ESC = 0x1b
 ESC_ALONE_TIMEOUT = 0.25     # a lone ESC this old really was the Escape key
@@ -87,8 +89,11 @@ class Reader:
         actions = []
         while self.buf:
             if self.buf[0] != ESC:
-                # An ordinary keystroke. Not Escape, so it does nothing.
-                _trace("byte %r ignored" % (bytes(self.buf[:1]),))
+                if self.buf[0] in (ord("n"), ord("N")):
+                    actions.append(NEXT)
+                    _trace("NEXT: n")
+                else:
+                    _trace("byte %r ignored" % (bytes(self.buf[:1]),))
                 del self.buf[0]
                 continue
 

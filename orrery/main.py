@@ -3,6 +3,7 @@
 Escape is the only thing that stops it. The mouse does not, other keys do
 not, and losing focus does not. Up and down arrow step the speed between
 1x and 5x so you can wind through the program without waiting an hour.
+n or N skips to the next movement, wrapping the last back to the first.
 
 Because losing focus no longer ends it, a fullscreen window that quietly
 stopped receiving keys would be unstoppable except by `orrery-stop`. So it
@@ -26,7 +27,7 @@ from .canvas import Canvas, MUTED, BRIGHT
 from .model import load_fleet, Camera
 from .larry import load_larry
 from .hud import Hud
-from .input import Reader, QUIT, FASTER, SLOWER
+from .input import Reader, QUIT, FASTER, SLOWER, NEXT
 from . import acts, font
 
 ALT_ON = "\x1b[?1049h"
@@ -179,6 +180,8 @@ def main(argv=None):
     ap.add_argument("--aspect", type=float, default=None,
                     help="dot aspect override; default probes the terminal")
     ap.add_argument("--no-hud", action="store_true")
+    ap.add_argument("--next-exits", action="store_true",
+                    help="return status 75 on n/N so a screensaver playlist can advance")
     ap.add_argument("--no-refocus", action="store_true",
                     help="do not claw back keyboard focus, and do not exit when "
                          "it is lost; for running windowed alongside other work")
@@ -228,6 +231,17 @@ def main(argv=None):
                 hud.stop()
 
 
+def next_movement_start(program, elapsed):
+    """Skip to the next movement boundary, wrapping the endless finale."""
+    start = 0.0
+    for index, act in enumerate(program):
+        end = start + act.duration
+        if elapsed < end:
+            return end if index + 1 < len(program) else 0.0
+        start = end
+    return 0.0
+
+
 def _run(canvas, fleet, larry, args, stop, sink, max_frames, hud, reader):
     program = acts.build_program(fleet)
     cam = Camera(min(canvas.W, canvas.H / canvas.aspect) * 0.46)
@@ -272,6 +286,10 @@ def _run(canvas, fleet, larry, args, stop, sink, max_frames, hud, reader):
                 elif action is SLOWER and speed > 1:
                     speed -= 1
                     osd_until = now + 1.6
+                elif action is NEXT:
+                    if getattr(args, "next_exits", False):
+                        return 75
+                    elapsed = next_movement_start(program, elapsed)
             if stop["now"]:
                 break
 
@@ -289,8 +307,6 @@ def _run(canvas, fleet, larry, args, stop, sink, max_frames, hud, reader):
                     threading.Thread(target=_try_refocus, daemon=True).start()
 
         dt = raw_dt * args.speed * speed
-        elapsed += dt
-        fleet.advance(dt, elapsed)
 
         acc = 0.0
         act = program[-1]
@@ -301,6 +317,14 @@ def _run(canvas, fleet, larry, args, stop, sink, max_frames, hud, reader):
                 local = elapsed - acc
                 break
             acc += a.duration
+
+        # Loop the selected movement instead of advancing on a timer.
+        # Only NEXT above selects a different movement (or playlist entry).
+        local += dt
+        if act.duration != float("inf") and act.duration > 0:
+            local %= act.duration
+        elapsed = acc + local
+        fleet.advance(dt, elapsed)
 
         canvas.clear()
         scene.overlay = None
